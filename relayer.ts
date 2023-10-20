@@ -9,11 +9,12 @@ import axios from 'axios';
 dotenv.config();
 
 // Customize the following variables
-// https://chainlist.org
+// The code below can be moved to the front-end. Below is for illustration purposes.
 const RPC_URL = process.env.RPC_URL!
 const provider = new ethers.providers.JsonRpcProvider(RPC_URL)
 const signer = new ethers.Wallet(process.env.OWNER_1_PRIVATE_KEY!, provider)
 const safeAddress = '0x26934E3C66BEbC61ACE5Fb31088FeD70C51D3EAF' // Safe from which the transaction will be sent. Replace with your Safe address
+// https://chainlist.org
 const chainId = 5
 
 // This mints 1 wei worth of token to user
